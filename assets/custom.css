@@ -1,0 +1,564 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;0,6..96,700;1,6..96,400&family=Libre+Franklin:wght@400;500;600;700&display=swap');
+
+:root {
+  --color-bg: #fffff0;
+  --color-bg-2: #f8f5e8;
+  --color-bg-white: #ffffff;
+  --color-bg-rgb: 255, 255, 240;
+  --color-bg-white-rgb: 255, 255, 255;
+  --color-surface: rgba(26, 26, 46, 0.02);
+  --color-surface-hover: rgba(26, 26, 46, 0.05);
+  --color-text: #1a1a2e;
+  --color-text-secondary: #3d3d56;
+  --color-text-muted: #8a8a9a;
+  --color-border: #e0d8c8;
+  --color-border-light: #ece6d8;
+  --color-accent: #b8e43c;
+  --color-accent-2: #13ede0;
+  --color-accent-3: #8f19eb;
+  --color-accent-warm: #e4ba3a;
+  --color-accent-soft: #edf0e4;
+  --color-accent-2-soft: #e3f1f0;
+  --color-accent-3-soft: #ebe3f1;
+  --color-accent-warm-soft: #f0ede4;
+  --color-star: #e4ba3a;
+  --color-success: #5a8a3c;
+  --color-badge: #c9a0a0;
+  --color-info: #1a1a2e;
+  --font-heading: 'Bodoni Moda', 'Didot', 'Georgia', serif;
+  --font-body: 'Libre Franklin', 'Helvetica Neue', sans-serif;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --color-footer-bg: #1a1a2e;
+  --color-footer-text: #f0ece0;
+  --color-footer-muted: #8a8a9a;
+  --color-footer-link: #d4cfc2;
+  --color-footer-border: rgba(228, 186, 58, 0.15);
+  --color-footer-social-bg: rgba(228, 186, 58, 0.08);
+  --color-footer-social-border: rgba(228, 186, 58, 0.2);
+  --shadow-sm: 0 1px 3px rgba(26, 26, 46, 0.06);
+  --shadow-md: 0 4px 12px rgba(26, 26, 46, 0.07);
+  --shadow-lg: 0 10px 30px rgba(26, 26, 46, 0.09);
+  --shadow-xl: 0 20px 50px rgba(26, 26, 46, 0.11);
+}
+
+/* ── Announcement Bar ──────────────────────────────────────── */
+.announcement-bar {
+  background: #1a1a2e;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+.announcement-bar strong {
+  color: var(--color-accent-warm);
+}
+
+/* ── Header ────────────────────────────────────────────────── */
+.site-header {
+  border-bottom: 1px solid rgba(228, 186, 58, 0.18);
+}
+.logo-text {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+.nav-link {
+  font-variant: small-caps;
+  letter-spacing: 0.8px;
+  font-size: 13px;
+}
+.nav-link.active {
+  color: #1a1a2e;
+  background: var(--color-accent-warm-soft);
+}
+
+/* ── Hero ──────────────────────────────────────────────────── */
+.hero {
+  background: #fffff0;
+  text-align: center;
+  position: relative;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(ellipse at 20% 20%, rgba(228, 186, 58, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 80%, rgba(143, 25, 235, 0.03) 0%, transparent 50%);
+  pointer-events: none;
+}
+.hero-content {
+  text-align: center;
+}
+.hero-actions {
+  justify-content: center;
+}
+.hero-subtitle {
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.hero-badge {
+  font-variant: small-caps;
+  letter-spacing: 2px;
+  border: 1px solid var(--color-accent-warm);
+  background: var(--color-accent-warm-soft);
+  color: #1a1a2e;
+}
+.hero-title {
+  letter-spacing: -0.5px;
+}
+
+/* ── Art Nouveau Corner Flourish (top-left) ────────────────── */
+.hero .hero-content::before {
+  content: '';
+  position: absolute;
+  top: 8%;
+  left: 3%;
+  width: 120px;
+  height: 120px;
+  border-top: 2px solid rgba(228, 186, 58, 0.35);
+  border-left: 2px solid rgba(228, 186, 58, 0.35);
+  border-top-left-radius: 60px;
+  pointer-events: none;
+  box-shadow:
+    inset 8px 8px 0 -6px rgba(228, 186, 58, 0.18),
+    -4px -4px 0 0 rgba(228, 186, 58, 0.1);
+}
+.hero .hero-content::after {
+  content: '';
+  position: absolute;
+  bottom: 8%;
+  right: 3%;
+  width: 120px;
+  height: 120px;
+  border-bottom: 2px solid rgba(228, 186, 58, 0.35);
+  border-right: 2px solid rgba(228, 186, 58, 0.35);
+  border-bottom-right-radius: 60px;
+  pointer-events: none;
+  box-shadow:
+    inset -8px -8px 0 -6px rgba(228, 186, 58, 0.18),
+    4px 4px 0 0 rgba(228, 186, 58, 0.1);
+}
+.hero .hero-content {
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .hero .hero-content::before,
+  .hero .hero-content::after {
+    width: 60px;
+    height: 60px;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+}
+
+/* ── Buttons ───────────────────────────────────────────────── */
+.btn-primary {
+  background: #1a1a2e;
+  color: var(--color-accent-warm);
+  font-variant: small-caps;
+  letter-spacing: 1.5px;
+  box-shadow: 0 4px 14px rgba(26, 26, 46, 0.2);
+}
+.btn-primary:hover {
+  box-shadow: 0 6px 22px rgba(26, 26, 46, 0.28);
+}
+.btn-cta {
+  background: #1a1a2e;
+  color: var(--color-accent-warm);
+  font-variant: small-caps;
+  letter-spacing: 1.2px;
+  box-shadow: 0 2px 8px rgba(26, 26, 46, 0.15);
+}
+.btn-cta:hover {
+  box-shadow: 0 4px 16px rgba(26, 26, 46, 0.25);
+}
+.btn-outline {
+  border-color: var(--color-accent-warm);
+  color: #1a1a2e;
+}
+.btn-outline:hover {
+  background: var(--color-accent-warm-soft);
+  border-color: var(--color-accent-warm);
+}
+
+/* ── Product Cards ─────────────────────────────────────────── */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1px solid rgba(228, 186, 58, 0.25);
+  transition: all 0.35s cubic-bezier(.4,0,.2,1);
+}
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 36px rgba(201, 160, 160, 0.15), 0 4px 12px rgba(201, 160, 160, 0.08);
+  border-color: rgba(228, 186, 58, 0.4);
+}
+.card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.card-brand {
+  font-variant: small-caps;
+  letter-spacing: 1.5px;
+}
+.card-title {
+  font-family: var(--font-heading);
+}
+
+/* ── Section Divider — Fleur-de-lis Ornament ───────────────── */
+.section-header::before {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-accent-warm), transparent);
+  margin: 0 auto 20px;
+}
+.section-header::after {
+  content: '◆';
+  display: block;
+  text-align: center;
+  color: var(--color-accent-warm);
+  font-size: 10px;
+  margin-top: -28px;
+  margin-bottom: 16px;
+  position: relative;
+  top: -6px;
+  background: var(--color-bg);
+  width: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1;
+}
+.section-title {
+  font-variant: small-caps;
+  letter-spacing: 1px;
+}
+
+/* ── Categories ────────────────────────────────────────────── */
+.category-card {
+  border: 1px solid rgba(228, 186, 58, 0.2);
+}
+.category-card:hover {
+  border-color: var(--color-accent-2);
+  box-shadow: 0 8px 24px rgba(19, 237, 224, 0.08);
+}
+.category-icon {
+  background: var(--color-accent-2-soft);
+  color: var(--color-accent-2);
+}
+
+/* ── Testimonials ──────────────────────────────────────────── */
+.testimonials-section {
+  background: var(--color-accent-3-soft);
+}
+.testimonial-text {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: 15px;
+  line-height: 1.8;
+  position: relative;
+  padding-left: 24px;
+}
+.testimonial-card::before {
+  content: '\201C';
+  font-family: var(--font-heading);
+  font-size: 64px;
+  line-height: 1;
+  color: var(--color-accent-warm);
+  opacity: 0.4;
+  position: absolute;
+  top: 16px;
+  left: 20px;
+  pointer-events: none;
+}
+.testimonial-card {
+  position: relative;
+  border: 1px solid rgba(228, 186, 58, 0.15);
+}
+.testimonial-avatar {
+  background: var(--color-accent-3-soft);
+  color: var(--color-accent-3);
+}
+
+/* ── FAQ ───────────────────────────────────────────────────── */
+.faq-section {
+  background: var(--color-accent-2-soft);
+}
+.faq-question {
+  font-family: var(--font-heading);
+  border-bottom: 1px solid rgba(228, 186, 58, 0.2);
+  letter-spacing: 0.3px;
+}
+.faq-item[open] .faq-question {
+  border-bottom-color: var(--color-accent-warm);
+}
+
+/* ── Newsletter ────────────────────────────────────────────── */
+.newsletter-section {
+  background: var(--color-accent-2-soft);
+  border-top: 1px solid rgba(19, 237, 224, 0.15);
+  border-bottom: 1px solid rgba(19, 237, 224, 0.15);
+}
+.newsletter-text h3 {
+  font-variant: small-caps;
+  letter-spacing: 1px;
+}
+.newsletter-form button {
+  background: #1a1a2e;
+  color: var(--color-accent-warm);
+  font-variant: small-caps;
+  letter-spacing: 1px;
+}
+.newsletter-form button:hover {
+  background: #2a2a4e;
+}
+.newsletter-form input:focus {
+  border-color: var(--color-accent-2);
+}
+
+/* ── Guide ─────────────────────────────────────────────────── */
+.guide-card {
+  border: 1px solid rgba(228, 186, 58, 0.2);
+}
+.guide-card:hover {
+  border-color: var(--color-accent-warm);
+  box-shadow: 0 8px 24px rgba(228, 186, 58, 0.1);
+}
+.guide-number {
+  background: var(--color-accent-warm);
+  font-family: var(--font-heading);
+}
+.guide-card-title {
+  font-family: var(--font-heading);
+}
+
+/* ── Stats ─────────────────────────────────────────────────── */
+.stats-section {
+  background: linear-gradient(135deg, #1a1a2e 0%, #2e1a3e 100%);
+}
+.stat-number {
+  font-family: var(--font-heading);
+  color: var(--color-accent-warm);
+}
+.stat-label {
+  font-variant: small-caps;
+  letter-spacing: 1px;
+}
+
+/* ── Top Picks ─────────────────────────────────────────────── */
+.top-picks-section {
+  background: var(--color-accent-warm-soft);
+}
+.top-pick-rank {
+  font-family: var(--font-heading);
+  color: var(--color-accent-warm);
+}
+.top-pick-item {
+  border: 1px solid rgba(228, 186, 58, 0.2);
+}
+.top-pick-item:hover {
+  border-color: var(--color-accent-warm);
+}
+.top-pick-name {
+  font-family: var(--font-heading);
+}
+
+/* ── Comparison Table ──────────────────────────────────────── */
+.comparison-table {
+  border: 1px solid rgba(228, 186, 58, 0.2);
+}
+.comparison-table th {
+  background: #f8f5e8;
+  font-variant: small-caps;
+  letter-spacing: 1px;
+  color: #1a1a2e;
+}
+
+/* ── Trust Section ─────────────────────────────────────────── */
+.trust-section {
+  border-bottom-color: rgba(228, 186, 58, 0.15);
+}
+.trust-item svg {
+  color: var(--color-accent-warm);
+}
+
+/* ── Footer ────────────────────────────────────────────────── */
+.footer-logo {
+  font-variant: small-caps;
+  letter-spacing: 2px;
+}
+.footer-col h4 {
+  color: var(--color-accent-warm);
+  letter-spacing: 2px;
+}
+.social-links a:hover {
+  background: var(--color-accent-warm);
+  border-color: var(--color-accent-warm);
+  color: #1a1a2e;
+}
+
+/* ── Price History ─────────────────────────────────────────── */
+.price-history-section {
+  border: 1px solid rgba(228, 186, 58, 0.2);
+  background: #ffffff;
+}
+.price-history-section .section-title {
+  font-variant: small-caps;
+}
+.chart-bar {
+  background: linear-gradient(180deg, var(--color-accent-soft) 0%, var(--color-accent) 100%);
+  border-radius: 4px 4px 0 0;
+}
+.chart-bar-current {
+  background: linear-gradient(180deg, rgba(90, 138, 60, 0.3) 0%, var(--color-success) 100%);
+}
+
+/* ── User Reviews ──────────────────────────────────────────── */
+.user-reviews-section {
+  border: 1px solid rgba(228, 186, 58, 0.2);
+  background: #ffffff;
+}
+.reviews-big-number {
+  font-family: var(--font-heading);
+  color: #1a1a2e;
+}
+.review-bar-fill {
+  background: var(--color-accent-warm);
+}
+.review-card {
+  background: #f8f5e8;
+  border: 1px solid rgba(228, 186, 58, 0.12);
+}
+.review-avatar {
+  background: #1a1a2e;
+}
+
+/* ── Pros & Cons ───────────────────────────────────────────── */
+.pros-cons-widget {
+  background: #f8f5e8;
+  border: 1px solid rgba(228, 186, 58, 0.2);
+}
+.pros-cons-widget h3 {
+  font-variant: small-caps;
+  letter-spacing: 0.5px;
+}
+
+/* ── Delivery Widget ───────────────────────────────────────── */
+.delivery-widget {
+  background: #f8f5e8;
+  border: 1px solid rgba(228, 186, 58, 0.2);
+}
+.delivery-item svg {
+  color: var(--color-accent-warm);
+}
+
+/* ── Social Proof Popup ────────────────────────────────────── */
+.social-proof-popup {
+  background: #ffffff;
+  border: 1px solid rgba(228, 186, 58, 0.25);
+  box-shadow: 0 12px 40px rgba(26, 26, 46, 0.12);
+}
+.popup-icon {
+  background: #1a1a2e;
+  color: var(--color-accent-warm);
+}
+
+/* ── Banner Row ────────────────────────────────────────────── */
+.banner-link {
+  border: 1px solid rgba(228, 186, 58, 0.2);
+}
+.banner-link:hover {
+  box-shadow: 0 8px 28px rgba(201, 160, 160, 0.12);
+}
+.banner-row-3 .banner-link {
+  border: 1px solid rgba(228, 186, 58, 0.2);
+}
+
+/* ── Brand Showcase ────────────────────────────────────────── */
+.brand-card {
+  border: 1px solid rgba(228, 186, 58, 0.2);
+}
+.brand-card:hover {
+  box-shadow: 0 8px 24px rgba(201, 160, 160, 0.1);
+}
+.brand-initial {
+  background: linear-gradient(135deg, #1a1a2e, var(--color-accent-3));
+}
+.brand-name {
+  font-family: var(--font-heading);
+}
+
+/* ── Trending ──────────────────────────────────────────────── */
+.trending-item {
+  background: #f8f5e8;
+  border: 1px solid rgba(228, 186, 58, 0.12);
+}
+.trending-rank {
+  font-family: var(--font-heading);
+  color: var(--color-accent-warm);
+}
+.trending-name {
+  font-family: var(--font-heading);
+}
+
+/* ── Filter / Pagination ───────────────────────────────────── */
+.filter-btn.active {
+  background: #1a1a2e;
+  border-color: #1a1a2e;
+}
+.page-num.active {
+  background: #1a1a2e;
+  border-color: #1a1a2e;
+}
+
+/* ── Cookie Banner ─────────────────────────────────────────── */
+.cookie-banner button {
+  background: #1a1a2e;
+  color: var(--color-accent-warm);
+  font-variant: small-caps;
+  letter-spacing: 0.8px;
+}
+
+/* ── Art Nouveau Gold Line — decorative hr between sections ── */
+.section + .section::before {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-accent-warm), transparent);
+  margin: 0 auto;
+  position: relative;
+  top: -36px;
+}
+
+/* ── Elegant Hover Animation for Cards ─────────────────────── */
+@keyframes card-shine {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+.product-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(228, 186, 58, 0.04), transparent);
+  transition: none;
+  pointer-events: none;
+  z-index: 1;
+}
+.product-card:hover::before {
+  animation: card-shine 0.6s ease forwards;
+}
